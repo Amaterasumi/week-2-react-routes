@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 
+function onclick() {
+  window.location.assign('https://www.google.com/')
+}
+
 const Header = () => {
   const [toggled, toggle] = useState(false)
 
@@ -29,6 +33,9 @@ const Header = () => {
           <button
             type="button"
             className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+            onClick={() => {
+              onclick()
+            }}
           >
             <svg
               className="fill-current h-3 w-3"
